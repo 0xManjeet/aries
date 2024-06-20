@@ -147,6 +147,8 @@ class _OptionsCalculatorChartState extends State<OptionsCalculatorChart> {
                   handleBuiltInTouches: true,
                   touchTooltipData: LineTouchTooltipData(
                     fitInsideHorizontally: true,
+                    // Set this to true if the graph widget does not have enough space above it,
+                    // I've set it to false because the animation looks better.
                     fitInsideVertically: false,
                     getTooltipColor: (touchedSpot) =>
                         context.theme.colorScheme.surfaceContainerLowest,

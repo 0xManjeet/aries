@@ -30,6 +30,7 @@ class GraphWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        // if you remove this sized box, set "fitInsideVertically" true in the OptionsCalculatorChart.
         const SizedBox(
           height: 100,
         ),
