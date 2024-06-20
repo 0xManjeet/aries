@@ -14,6 +14,7 @@ class OptionsCalculatorPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Options Calculator'),
       ),
+      // loads the sample data, the validations of the data should have happened before this.
       body: GraphWidget(positions: sampleData),
     );
   }

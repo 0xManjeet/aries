@@ -9,6 +9,7 @@ class OptionsData {
 
 // horizontal axis data
   (double, double) underlyingPriceRange() {
+    // buffer to add to the min and max strike price
     double buf = 0.2;
     double min =
         options.map((e) => e.strikePrice).reduce((a, b) => a > b ? b : a) *

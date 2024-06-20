@@ -87,6 +87,7 @@ class _OptionsCalculatorChartState extends State<OptionsCalculatorChart> {
     calculateDataPoints();
   }
 
+// Calculates the initial neccessary data and stores them for later use.
   void calculateDataPoints() {
     var x = widget.optionsData.underlyingPriceRange();
     minX = x.$1;
@@ -109,6 +110,7 @@ class _OptionsCalculatorChartState extends State<OptionsCalculatorChart> {
 
   @override
   Widget build(BuildContext context) {
+    // we're setting up the limits for the vertical axis.
     for (var option in widget.optionsData.options.indexed) {
       for (var spot in range) {
         double profit = option.$2.calculateProfit(spot);
@@ -132,6 +134,7 @@ class _OptionsCalculatorChartState extends State<OptionsCalculatorChart> {
             ),
             child: LineChart(
               LineChartData(
+                // These lines denote the break even price for each option.
                 extraLinesData: ExtraLinesData(
                   verticalLines: [
                     for (var option in widget.optionsData.options.indexed)
@@ -197,6 +200,7 @@ class _OptionsCalculatorChartState extends State<OptionsCalculatorChart> {
               ),
             ),
           ),
+          // Legends Widget.
           Column(
             children: [
               // two rows, each with max 2 elements
@@ -227,6 +231,7 @@ class _OptionsCalculatorChartState extends State<OptionsCalculatorChart> {
                 ),
             ],
           ),
+          // Details about the selected option.
           selectedOptionDetailsWidget(
             context,
             widget.optionsData.options[selectedOption],
