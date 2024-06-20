@@ -12,7 +12,7 @@ class OptionsCalculatorPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Risk Reward Calculator'),
+        title: const Text('Options Calculator'),
       ),
       body: GraphWidget(positions: sampleData),
     );
